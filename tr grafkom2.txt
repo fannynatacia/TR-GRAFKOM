@@ -59,7 +59,7 @@ void bangunan_kiri() {
     glVertex3f(50, 0, 5);
     glVertex3f(50, -10, 0);
     glEnd();
-    //db(-150.0, 20.0, -10.0, 0.0, 0.0);
+    //db(-150.0, 20.0, -10.0, 0.0, 0.1);
 
     //bangunan kiri atas tengah
     glColor3f(1.0, 0.0, 0.0);
