@@ -64,7 +64,7 @@ void bangunan_kiri() {
     //bangunan kiri atas tengah
     glColor3f(1.0, 0.0, 0.0);
     //depan
-    db(-160.0, 50.0, -35.0, -10.0, 0.0);
+    db(-160.0, 50.0, -35.0, -10.0, 0.1);
 
     glColor3f(0.85, 0.76, 0.67);
     //depan
