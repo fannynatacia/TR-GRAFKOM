@@ -278,6 +278,32 @@ void bangunan_kanan() {
     glVertex3f(138.5, -157.0, 18.0);
     glEnd();
 
+    //jendela
+    glBegin(GL_LINE_LOOP);
+    glColor3f(0.85, 0.76, 0.67);
+    glVertex3f(140.0, -160.0, 1.0);
+    glVertex3f(140.0, 150.0, 1.0);
+    glVertex3f(120.0, 150.0, 1.0);
+    glVertex3f(120.0, -160.0, 1.0);
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+    glColor3f(0.85, 0.76, 0.67);
+    glVertex3f(70.0, -160.0, 1.0);
+    glVertex3f(70.0, 150.0, 1.0);
+    glVertex3f(90.0, 150.0, 1.0);
+    glVertex3f(90.0, -160.0, 1.0);
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+    glColor3f(0.85, 0.76, 0.67);
+    glVertex3f(120.0, -90.0, 1.0);
+    glVertex3f(120.0, 150.0, 1.0);
+    glVertex3f(90.0, 150.0, 1.0);
+    glVertex3f(90.0, -90.0, 1.0);
+    glEnd();
+
+
     /*glColor3f(1.0, 0.0, 0.0);
     //atas
     ab(-75.0, 10.0, -5.0, 0.0, -85.0);
