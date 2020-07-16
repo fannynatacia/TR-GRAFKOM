@@ -191,8 +191,8 @@ void bangunan_kanan() {
     //tembok kanan menonjol
     glBegin(GL_QUADS);
     glColor3f(0.85, 0.76, 0.67);
-    glVertex3f(138.5, -157.0, 15.0);
-    glVertex3f(138.5, 145.5, 15.0);
+    glVertex3f(140.0, -157.0, 15.0);
+    glVertex3f(140.0, 145.5, 15.0);
     glVertex3f(160.0, 145.5, 15.0);
     glVertex3f(160.0, -157.0, 15.0);
     glEnd();
@@ -200,19 +200,19 @@ void bangunan_kanan() {
     //bawah
     glBegin(GL_QUADS);
     glColor3f(0.6, 0.5, 0.4);
-    glVertex3f(138.5, -157.0, 15.0);
+    glVertex3f(140.0, -157.0, 15.0);
     glVertex3f(160.0, -157.0, 15.0);
     glVertex3f(160.0, -160.0, 0.0);
-    glVertex3f(138.5, -160.0, 0.0);
+    glVertex3f(140.0, -160.0, 0.0);
     glEnd();
 
     //atas
     glBegin(GL_QUADS);
     glColor3f(0.6, 0.5, 0.4);
-    glVertex3f(138.5, 150, 0.0);
+    glVertex3f(140.0, 150, 0.0);
     glVertex3f(160.0, 150, 0.0);
     glVertex3f(160.0, 145.5, 15.0);
-    glVertex3f(138.5, 145.5, 15.0);
+    glVertex3f(140.0, 145.5, 15.0);
     glEnd();
 
     //kanan
@@ -227,17 +227,17 @@ void bangunan_kanan() {
     //kiri
     glBegin(GL_QUADS);
     glColor3f(0.6, 0.5, 0.4);
-    glVertex3f(138.5, 150.0, 0.0);
-    glVertex3f(138.5, 145.5, 15.0);
-    glVertex3f(138.5, -157.0, 15.0);
-    glVertex3f(138.5, -160.0, 0.0);
+    glVertex3f(140.0, 150.0, 0.0);
+    glVertex3f(140.0, 145.5, 15.0);
+    glVertex3f(140.0, -157.0, 15.0);
+    glVertex3f(140.0, -160.0, 0.0);
     glEnd();
 
     //tembok kanan menonjol bawah
     glBegin(GL_QUADS);
     glColor3f(1.0, 0.2, 0.2);
-    glVertex3f(138.5, -157.0, 18.0);
-    glVertex3f(138.5, -140.0, 18.0);
+    glVertex3f(140.0, -157.0, 18.0);
+    glVertex3f(140.0, -140.0, 18.0);
     glVertex3f(160.0, -140.0, 18.0);
     glVertex3f(160.0, -157.0, 18.0);
     glEnd();
@@ -245,10 +245,10 @@ void bangunan_kanan() {
     //tembok kanan menonjol bawah sisi kiri
     glBegin(GL_QUADS);
     glColor3f(0.6, 0.5, 0.4);
-    glVertex3f(138.5, -157.0, 18.0);
-    glVertex3f(138.5, -140.0, 18.0);
-    glVertex3f(138.5, -140.0, 15.0);
-    glVertex3f(138.5, -157.0, 15.0);
+    glVertex3f(140.0, -157.0, 18.0);
+    glVertex3f(140.0, -140.0, 18.0);
+    glVertex3f(140.0, -140.0, 15.0);
+    glVertex3f(140.0, -157.0, 15.0);
     glEnd();
 
     //tembok kanan menonjol bawah sisi kanan
