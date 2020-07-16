@@ -8,3 +8,15 @@ void ukuran(int lebar, int tinggi)
     glTranslatef(0.0, -5.0, -150.0);
     glMatrixMode(GL_MODELVIEW);
 }
+
+void ukuran(int lebar, int tinggi)
+{
+    if (tinggi == 0) tinggi = 1;
+
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluPerspective(90.0, lebar / tinggi, 5.0, 500.0);
+    glViewport(0, 0, 900, 600);
+    glTranslatef(0.0, -5.0, -220.0);
+    glMatrixMode(GL_MODELVIEW);
+}
