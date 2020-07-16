@@ -1,0 +1,2 @@
+warna tembok : glColor3f(0.85, 0.76, 0.67);
+warna tiang samping : glColor3f(0.6, 0.5, 0.4);
