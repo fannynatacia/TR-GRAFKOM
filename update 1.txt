@@ -497,7 +497,7 @@ void bangunan_kanan() {
     glEnd();
 
     glBegin(GL_QUADS);
-    glColor3f(0, 0, 0);
+    glColor3f(0.2, 0.2, 0.2);
     glVertex3f(140.0, -160.0, 1.0);
     glVertex3f(140.0, 150.0, 1.0);
     glVertex3f(120.0, 150.0, 1.0);
@@ -505,7 +505,7 @@ void bangunan_kanan() {
     glEnd();
 
     glBegin(GL_QUADS);
-    glColor3f(0, 0, 0);
+    glColor3f(0.2, 0.2, 0.2);
     glVertex3f(140.0, -160.0, 1.0);
     glVertex3f(140.0, 150.0, 1.0);
     glVertex3f(120.0, 150.0, 1.0);
@@ -521,7 +521,7 @@ void bangunan_kanan() {
     glEnd();
 
     glBegin(GL_QUADS);
-    glColor3f(0, 0, 0);
+    glColor3f(0.2, 0.2, 0.2);
     glVertex3f(70.0, -160.0, 1.0);
     glVertex3f(70.0, 150.0, 1.0);
     glVertex3f(90.0, 150.0, 1.0);
@@ -545,7 +545,7 @@ void bangunan_kanan() {
     glEnd();
 
     glBegin(GL_QUADS);
-    glColor3f(0, 0, 0);
+    glColor3f(0.2, 0.2, 0.2);
     glVertex3f(120.0, -90.0, 1.0);
     glVertex3f(120.0, 150.0, 1.0);
     glVertex3f(90.0, 150.0, 1.0);
