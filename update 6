@@ -20,9 +20,6 @@ float zmov = 0.0f;
 float xdiff = 0.0f;
 float ydiff = 0.0f;
 bool mouseDown = false;
-//deklarasi pembuatan lingkaran
-const double PI = 3.142857143;
-int i, radius, jumlah_titik, x_tengah, y_tengah;
 //deklarasi gerakan otomatis
 int gerak = 0;
 bool atas = true;
@@ -1374,51 +1371,6 @@ void mobil() {
     glVertex3f(48.5, -130.5, 35.1);
     glVertex3f(48.5, -145.5, 35.1);
     glEnd();
-
-    //ban depan
-    glColor3f(1, 1, 1);
-    glBegin(GL_POLYGON);
-
-    radius = 40;
-    jumlah_titik = 60;
-    x_tengah = 190;
-    y_tengah = -90;
-
-    for (i = 0; i <= 360; i++)
-    {
-        float sudut = i * (2 * PI / jumlah_titik);
-        float x = x_tengah + radius * cos(sudut);
-        float y = y_tengah + radius * sin(sudut);
-        glVertex2f(x / 100, y / 100);
-    }
-    glEnd();
-    glFlush();
-
-    //ban belakang
-    glColor3f(1, 1, 1);
-    glBegin(GL_POLYGON);
-
-    radius = 40;
-    jumlah_titik = 60;
-    x_tengah = -90;
-    y_tengah = -90;
-
-    for (i = 0; i <= 360; i++)
-    {
-        float sudut = i * (2 * PI / jumlah_titik);
-        float x = x_tengah + radius * cos(sudut);
-        float y = y_tengah + radius * sin(sudut);
-        glVertex2f(x / 100, y / 100);
-    }
-    glEnd();
-    glFlush();
-
-
-    glEnd();
-    glFlush();
-    glPopMatrix();
-
-
 }
 
 
