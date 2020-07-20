@@ -2589,14 +2589,14 @@ void bangunan_kanan() {
     glLineWidth(30.0);
     glBegin(GL_LINES);
     glColor3f(0.3, 0.3, 0.3);
-    glVertex3f(160, -20, -70);
+    glVertex3f(159.9, -20, -70);
     glVertex3f(157, -20, -70);
     glEnd();
 
     glLineWidth(30.0);
     glBegin(GL_LINES);
     glColor3f(0.3, 0.3, 0.3);
-    glVertex3f(160, -20, -65);
+    glVertex3f(159.9, -20, -65);
     glVertex3f(157, -20, -65);
     glEnd();
 
