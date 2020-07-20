@@ -2582,13 +2582,13 @@ void bangunan_kanan() {
     glVertex3f(-50.0, -159.9, -250);
     glEnd();
 
-    glLineWidth(10.0);
+    glLineWidth(5.0);
     glBegin(GL_LINE_LOOP);
     glColor3f(0.66, 0.15, 0.15);
-    glVertex3f(-140.0, -159.8, -250);
-    glVertex3f(-140.0, -159.8, -290);
-    glVertex3f(-50.0, -159.8, -290);
-    glVertex3f(-50.0, -159.8, -250);
+    glVertex3f(-140.0, -158, -250);
+    glVertex3f(-140.0, -158, -290);
+    glVertex3f(-50.0, -158, -290);
+    glVertex3f(-50.0, -158, -250);
     glEnd();
 
     //tv
