@@ -83,7 +83,6 @@ void ab(float xkiri, float xkanan, float y, float zdepan, float zbelakang) {
     glEnd();
 }
 
-
 void bangunan_kiri_depan() {
     //bangunan kiri atas
     glColor3f(0.85, 0.76, 0.67);
@@ -664,6 +663,7 @@ void bangunan_kiri_depan() {
     //kanan
     kk(-23.0, -165.0, -164.0, 8.6, 6.6);
 
+    //renderScene();
 }
 
 void bangunan_kiri_belakang() {
@@ -1148,6 +1148,8 @@ void isi() {
     kk(-145.0, -165.0, -135.0, -50.0, -53.0);
     //kanan
     kk(-142.0, -165.0, -135.0, -50.0, -53.0);
+    //bawah
+    ab(-145.0, -142.0, -165.0, -50.0, -53.0);
     //--kiri belakang--
     //depan
     db(-145.0, -142.0, -165.0, -135.0, -90.0);
@@ -1157,6 +1159,8 @@ void isi() {
     kk(-145.0, -165.0, -135.0, -90.0, -87.0);
     //kanan
     kk(-142.0, -165.0, -135.0, -90.0, -87.0);
+    //bawah
+    ab(-145.0, -142.0, -165.0, -87.0, -90.0);
     //--kanan depan--
     //depan
     db(7.0, 10.0, -165.0, -135.0, -50.0);
@@ -1166,6 +1170,8 @@ void isi() {
     kk(7.0, -165.0, -135.0, -50.0, -53.0);
     //kanan
     kk(10.0, -165.0, -135.0, -50.0, -53.0);
+    //bawah
+    ab(7.0, 10.0, -165.0, -50.0, -53.0);
     //--kanan belakang--
     //depan
     db(7.0, 10, -165.0, -135.0, -90.0);
@@ -1175,35 +1181,36 @@ void isi() {
     kk(7.0, -165.0, -135.0, -90.0, -87.0);
     //kanan
     kk(10.0, -165.0, -135.0, -90.0, -87.0);
-
+    //bawah
+    ab(7.0, 10.0, -165.0, -87.0, -90.0);
     //PAPAN TULIS
     //--belakang--
     glColor3f(0.5, 0.5, 0.5);
-    db(-145.0, 10.0, -130.0, -30.0, -139.995);
+    db(-145.0, 10.0, -130.0, -40.0, -139.995);
     //--depan--
     glColor3f(1.0, 1.0, 1.0);
-    db(-142.0, 7.0, -127.0, -33.0, -139.5);
+    db(-142.0, 7.0, -127.0, -43.0, -139.5);
     //depankiri
     glColor3f(0.0, 0.0, 0.0);
     glBegin(GL_QUADS);
     glVertex3f(-145.0, -130.0, -139.0);
-    glVertex3f(-145.0, -30.0, -139.0);
-    glVertex3f(-142.0, -33.0, -139.5);
+    glVertex3f(-145.0, -40.0, -139.0);
+    glVertex3f(-142.0, -43.0, -139.5);
     glVertex3f(-142.0, -127.0, -139.5);
     glEnd();
     //depankanan
     glBegin(GL_QUADS);
     glVertex3f(10.0, -130.0, -139.0);
-    glVertex3f(10.0, -30.0, -139.0);
-    glVertex3f(7.0, -33.0, -139.5);
+    glVertex3f(10.0, -40.0, -139.0);
+    glVertex3f(7.0, -43.0, -139.5);
     glVertex3f(7.0, -127.0, -139.5);
     glEnd();
     //depanatas
     glBegin(GL_QUADS);
-    glVertex3f(-142.0, -33.0, -139.0);
-    glVertex3f(-145.0, -30.0, -139.0);
-    glVertex3f(10.0, -30.0, -139.5);
-    glVertex3f(7.0, -33.0, -139.5);
+    glVertex3f(-142.0, -43.0, -139.0);
+    glVertex3f(-145.0, -40.0, -139.0);
+    glVertex3f(10.0, -40.0, -139.5);
+    glVertex3f(7.0, -43.0, -139.5);
     glEnd();
     //depanbawah
     glBegin(GL_QUADS);
@@ -1213,9 +1220,9 @@ void isi() {
     glVertex3f(7.0, -127.0, -139.5);
     glEnd();
     //--kiri--
-    kk(-145.0, -130.0, -30.0, -139.995, -139.0);
+    kk(-145.0, -130.0, -40.0, -139.995, -139.0);
     //--kanan--
-    kk(10.0, -130.0, -30.0, -139.995, -139.0);
+    kk(10.0, -130.0, -40.0, -139.995, -139.0);
     //--tempat penghapus--
     glColor3f(0.0, 0.0, 0.0);
     ab(-125.0, -10.0, -128.5, -135.0, -139.0);
@@ -1418,7 +1425,6 @@ void mobil() {
 
 
 }
-
 
 void bangunan_kanan() {
     glColor3f(1.0, 1.0, 1.0);
@@ -2576,7 +2582,7 @@ void bangunan_kanan() {
     glVertex3f(-50.0, -159.9, -250);
     glEnd();
 
-    glLineWidth(100.0);
+    glLineWidth(10.0);
     glBegin(GL_LINE_LOOP);
     glColor3f(0.66, 0.15, 0.15);
     glVertex3f(-140.0, -159.8, -250);
@@ -2589,14 +2595,14 @@ void bangunan_kanan() {
     glLineWidth(30.0);
     glBegin(GL_LINES);
     glColor3f(0.3, 0.3, 0.3);
-    glVertex3f(159.9, -20, -70);
+    glVertex3f(160, -20, -70);
     glVertex3f(157, -20, -70);
     glEnd();
 
     glLineWidth(30.0);
     glBegin(GL_LINES);
     glColor3f(0.3, 0.3, 0.3);
-    glVertex3f(159.9, -20, -65);
+    glVertex3f(160, -20, -65);
     glVertex3f(157, -20, -65);
     glEnd();
 
@@ -3638,6 +3644,7 @@ void bangunan_kanan() {
     //bawah
     (-80.0, 10.0, -70.0, 0.0, -90.0);*/
 }
+
 void timer(int t)
 {
     if (atas) {
@@ -3697,9 +3704,10 @@ void tampil(void)
     else
         glClear(GL_COLOR_BUFFER_BIT);
 
-    bangunan_kiri_depan();
     bangunan_kiri_belakang();
+    bangunan_kiri_depan();
     bangunan_kanan();
+    isi();
     mobil();
 
     glPushMatrix();
@@ -3804,8 +3812,9 @@ void ukuran(int lebar, int tinggi)
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluPerspective(90.0, lebar / tinggi, 5.0, 500.0);
-
     glViewport(0, 0, 900, 600);
     glTranslatef(0.0, -5.0, -220.0);
+    //gluPerspective(50.0, 1000 / 700, 5.0, 500.0);
+    //glTranslatef(0.0, -5.0, -450.0);
     glMatrixMode(GL_MODELVIEW);
 }
