@@ -1,0 +1,131 @@
+#include <stdlib.h>
+#include <gl/glut.h>
+#include <math.h>
+#define PI 3.1415926535
+
+int angle=0;
+int i, n;
+
+//lingkaran
+void lingkaran(int radius, int n_titik, int x_tgh, int y_tgh)
+{
+	glBegin(GL_POLYGON);
+	for (i = 0; i <= 360; i++){
+		float angle = i * (2 * PI / n_titik);
+		float x = x_tgh + radius * cos(angle);
+		float y = y_tgh + radius * sin(angle);
+		glVertex2f(x, y);
+		glColor3f(0.8, 0.4, 0.4);
+	}
+	glEnd();
+}
+
+//jarum jam
+void jarumjam()
+{
+	glBegin(GL_POLYGON);
+	glColor3f(0.54, 0, 0);
+	glVertex2i(0, 200);
+	glVertex2i(10, 0);
+	glVertex2i(-10, 0);
+	glEnd();
+}
+
+//jarum menit
+void jarummenit()
+{
+	glBegin(GL_POLYGON);
+	glColor3f(0.28, 0.24, 0.55);
+	glVertex2i(0, 230);
+	glVertex2i(10, 0);
+	glVertex2i(-10, 0);
+	glEnd();
+}
+
+//jarum detik
+void jarumdetik()
+{
+	glBegin(GL_POLYGON);
+	glColor3f(1.0, 0.0, 0.0);
+	glVertex2i(0, 230);
+	glVertex2i(5, 0);
+	glVertex2i(-5, 0);
+	glEnd();
+}
+
+//angka jam
+void angkajam(float jarak, float x, float y)
+{
+	glPointSize(15);
+	glBegin(GL_POINTS);
+	glColor3f(0.54, 0, 0);
+	for (n = 0; n < 360; n += 30)
+		glVertex2f(jarak * (float)sin(n * PI / 180.0) + x, jarak * (float)cos(n * PI / 180.0) + y);
+	glEnd();
+}
+
+//titik menit
+void titikmenit(float jarak, float x, float y)
+{
+	glPointSize(5);
+	glBegin(GL_POINTS);
+	glColor3f(0.28, 0.24, 0.55);
+	for (n = 0; n < 360; n += 6)
+		glVertex2f(jarak * (float)sin(n * PI / 180.0) + x, jarak * (float)cos(n * PI / 180.0) + y);
+	glEnd();
+}
+
+void renderScene(void)
+{
+	glClear(GL_COLOR_BUFFER_BIT);
+	glPushMatrix();
+
+	//badan jam
+	glColor3f(0.8, 0.8, 0.8);
+	lingkaran(260, 100, 0, 0);
+	titikmenit(230., 0., 0.);
+	angkajam(230., 0., 0.);
+	glPopMatrix();
+
+	//jarum jam
+	glPushMatrix();
+	glRotatef(angle / 720, 0, 0, 1);
+	jarumjam();
+	glPopMatrix();
+	
+	//jarum menit
+	glPushMatrix();
+	glRotatef(angle / 60, 0, 0, 1);
+	jarummenit();
+	glPopMatrix();
+
+	//jarum detik
+	glPushMatrix();
+	glRotatef(angle, 0, 0, 1);
+	jarumdetik();
+	glPopMatrix();
+
+	//pusat tengah
+	lingkaran(10, 50, 0, 1);
+	
+	glFlush();
+}
+
+void timer(int value)
+{
+	angle -= 6.3;
+	glutPostRedisplay();
+	glutTimerFunc(1000, timer, 0);
+}
+
+void main(int argc, char** argv)
+{
+	glutInit(&argc, argv);
+	glutInitWindowPosition(100, 100);
+	glutInitWindowSize(600, 600);
+	glutCreateWindow("Kevitha Praisy Monding - 672018223");
+	gluOrtho2D(-360., 360., -360., 360.);
+	glutDisplayFunc(renderScene);
+	glutTimerFunc(1, timer, 0);
+	glutMainLoop();
+}
