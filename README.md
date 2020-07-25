@@ -1,4 +1,5 @@
 # TR-GRAFKOM
-yolandita, kevitha, fanny
-Teman-teman, mari kita kerjakan dengan sepenuh hati dan jiwa raga ya!!
-y
+-	Kevitha Praisy Monding 	  (672018223)
+-	Fanny Natacia			        (672018603)
+-	Yolandita Dewi Pramudita 	(672018395)
+Grafika Komputer F
